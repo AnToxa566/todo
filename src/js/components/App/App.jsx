@@ -1,5 +1,11 @@
+import Input from "../Input/Input";
+
 function App() {
-  return <>Test</>;
+  return (
+    <>
+      <Input placeholder="Add a new task" />
+    </>
+  );
 }
 
 export default App;
