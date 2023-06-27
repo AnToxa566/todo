@@ -1,0 +1,25 @@
+.createButton {
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+
+    font-size: $sm-font-size;
+    font-weight: bold;
+
+    padding: 1rem;
+
+    color: $gray-100;
+    background-color: $blue-dark;
+
+    border-radius: .5rem;
+    border: none;
+
+    &__rightIcon {
+        margin-left: .5rem;
+    }
+
+    &:hover {
+        background-color: $blue;
+    }
+}
