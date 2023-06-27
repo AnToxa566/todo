@@ -1,9 +1,9 @@
-import Task from "../Task/Task";
+import Header from "../Header/Header";
 
 function App() {
   return (
     <>
-      <Task text="Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer." />
+      <Header />
     </>
   );
 }
