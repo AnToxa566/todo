@@ -1,8 +1,9 @@
+import PropTypes from "prop-types";
 import style from "./delete-button.module.scss";
 
-export default function DeleteButton() {
+export default function DeleteButton({ className }) {
   return (
-    <button className={style.deleteButton}>
+    <button className={`${style.deleteButton} ${className}`}>
       <svg
         className={style.deleteButton__icon}
         width="13"
@@ -18,3 +19,7 @@ export default function DeleteButton() {
     </button>
   );
 }
+
+DeleteButton.propTypes = {
+  className: PropTypes.string,
+};

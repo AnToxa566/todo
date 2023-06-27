@@ -1,23 +1,24 @@
+import PropTypes from "prop-types";
 import style from "./checkbox.module.scss";
+import { useState } from "react";
 
-export default function Checkbox() {
-  const data = {
-    checked: false,
-  };
+export default function Checkbox({ checked, updateData, className }) {
+  const [isChecked, setIsChecked] = useState(checked || false);
 
-  const clickHandler = (event) => {
+  const handleChange = (event) => {
     const checkElement = event.currentTarget;
-
     checkElement.classList.toggle(`${style.checkbox_checked}`);
-    data.checked = !data.checked;
+
+    updateData(!isChecked);
+    setIsChecked(!isChecked);
   };
 
   return (
     <div
       className={`${style.checkbox} ${
-        data.checked ? style.checkbox_checked : ""
-      }`}
-      onClick={clickHandler}
+        isChecked ? style.checkbox_checked : ""
+      } ${className}`}
+      onClick={handleChange}
     >
       <img
         className={style.checkbox__tick}
@@ -27,3 +28,9 @@ export default function Checkbox() {
     </div>
   );
 }
+
+Checkbox.propTypes = {
+  checked: PropTypes.bool,
+  updateData: PropTypes.func,
+  className: PropTypes.string,
+};
