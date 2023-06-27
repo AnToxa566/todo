@@ -1,0 +1,39 @@
+.checkbox {
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+    $checkbox-size: 1.125rem;
+
+    width: $checkbox-size;
+    height: $checkbox-size;
+
+    border: 2px solid $blue;
+    border-radius: calc($checkbox-size / 2);
+
+    &__tick {
+        display: none;
+    }
+
+    &:hover {
+        border-color: $blue-dark;
+        background-color: rgba($color: $blue-dark, $alpha: .2);
+    }
+
+    &_checked {
+        border: none;
+        background-color: $purple-dark;
+
+        .checkbox__tick {
+            display: block;
+        }
+
+        &:hover {
+            border: none;
+            background-color: $purple;
+        }
+    }
+}
