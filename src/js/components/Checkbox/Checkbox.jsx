@@ -1,5 +1,7 @@
 import PropTypes from "prop-types";
 import styles from "./styles.module.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
 export default function Checkbox({ checked, updateData, className }) {
@@ -20,11 +22,7 @@ export default function Checkbox({ checked, updateData, className }) {
       } ${className}`}
       onClick={handleChange}
     >
-      <img
-        className={styles.checkbox__tick}
-        src="src/assets/icons/tick.svg"
-        alt=""
-      />
+      <FontAwesomeIcon className={styles.checkbox__checkIcon} icon={faCheck} />
     </div>
   );
 }

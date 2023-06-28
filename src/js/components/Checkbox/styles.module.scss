@@ -14,8 +14,11 @@
     border: 2px solid $blue;
     border-radius: calc($checkbox-size / 2);
 
-    &__tick {
+    &__checkIcon {
         display: none;
+
+        color: $gray-100;
+        width: 50%;
     }
 
     &:hover {
@@ -27,7 +30,7 @@
         border: none;
         background-color: $purple-dark;
 
-        .checkbox__tick {
+        .checkbox__checkIcon {
             display: block;
         }
 

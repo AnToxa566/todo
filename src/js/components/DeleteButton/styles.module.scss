@@ -10,18 +10,14 @@
     background-color: transparent;
 
     &__icon {
-        path {
-            fill: $gray-300;
-        }
+        color: $gray-300;
     }
 
     &:hover {
         background-color: $gray-400;
 
         .deleteButton__icon {
-            path {
-                fill: $danger;
-            }
+            color: $danger;
         }
     }
 }
