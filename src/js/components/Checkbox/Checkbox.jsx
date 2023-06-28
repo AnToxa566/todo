@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import style from "./checkbox.module.scss";
+import styles from "./styles.module.scss";
 import { useState } from "react";
 
 export default function Checkbox({ checked, updateData, className }) {
@@ -7,7 +7,7 @@ export default function Checkbox({ checked, updateData, className }) {
 
   const handleChange = (event) => {
     const checkElement = event.currentTarget;
-    checkElement.classList.toggle(`${style.checkbox_checked}`);
+    checkElement.classList.toggle(`${styles.checkbox_checked}`);
 
     updateData(!isChecked);
     setIsChecked(!isChecked);
@@ -15,13 +15,13 @@ export default function Checkbox({ checked, updateData, className }) {
 
   return (
     <div
-      className={`${style.checkbox} ${
-        isChecked ? style.checkbox_checked : ""
+      className={`${styles.checkbox} ${
+        isChecked ? styles.checkbox_checked : ""
       } ${className}`}
       onClick={handleChange}
     >
       <img
-        className={style.checkbox__tick}
+        className={styles.checkbox__tick}
         src="src/assets/icons/tick.svg"
         alt=""
       />

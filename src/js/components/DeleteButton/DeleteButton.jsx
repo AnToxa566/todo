@@ -1,11 +1,11 @@
 import PropTypes from "prop-types";
-import style from "./delete-button.module.scss";
+import styles from "./styles.module.scss";
 
 export default function DeleteButton({ className }) {
   return (
-    <button className={`${style.deleteButton} ${className}`}>
+    <button className={`${styles.deleteButton} ${className}`}>
       <svg
-        className={style.deleteButton__icon}
+        className={styles.deleteButton__icon}
         width="13"
         height="14"
         viewBox="0 0 13 14"

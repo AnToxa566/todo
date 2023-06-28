@@ -1,4 +1,4 @@
-import style from "./app.module.scss";
+import styles from "./styles.module.scss";
 import Header from "../Header/Header";
 import Container from "../Container/Container";
 import NewTask from "../NewTask/NewTask";
@@ -9,7 +9,7 @@ function App() {
       <Header />
 
       <Container>
-        <NewTask className={style.app__newTask} />
+        <NewTask className={styles.app__newTask} />
       </Container>
     </>
   );

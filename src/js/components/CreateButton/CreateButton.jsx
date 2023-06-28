@@ -1,12 +1,12 @@
 import PropTypes from "prop-types";
-import style from "./create-button.module.scss";
+import styles from "./styles.module.scss";
 
 export default function CreateButton({ text }) {
   return (
-    <button className={style.createButton}>
+    <button className={styles.createButton}>
       {text || "Create"}
       <img
-        className={style.createButton__rightIcon}
+        className={styles.createButton__rightIcon}
         src="src/assets/icons/plus.svg"
         alt=""
       />

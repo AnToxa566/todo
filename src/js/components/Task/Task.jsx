@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import Checkbox from "../Checkbox/Checkbox";
 import DeleteButton from "../DeleteButton/DeleteButton";
-import style from "./task.module.scss";
+import styles from "./styles.module.scss";
 import { useState } from "react";
 
 export default function Task({ text, done }) {
@@ -12,17 +12,17 @@ export default function Task({ text, done }) {
   };
 
   return (
-    <div className={`${style.task} ${isDone ? style.task_done : ""}`}>
-      <div className={style.task__left}>
+    <div className={`${styles.task} ${isDone ? styles.task_done : ""}`}>
+      <div className={styles.task__left}>
         <Checkbox
-          className={style.task__check}
+          className={styles.task__check}
           checked={isDone}
           updateData={updateData}
         />
-        <p className={style.task__text}>{text}</p>
+        <p className={styles.task__text}>{text}</p>
       </div>
 
-      <DeleteButton className={style.task__deleteBtn} />
+      <DeleteButton className={styles.task__deleteBtn} />
     </div>
   );
 }
