@@ -5,7 +5,7 @@ import styles from "./styles.module.scss";
 import { useState } from "react";
 
 export default function Task({ text, done }) {
-  const [isDone, setIsDone] = useState(done || false);
+  const [isDone, setIsDone] = useState(done);
 
   const updateData = (value) => {
     setIsDone(value);
@@ -28,6 +28,10 @@ export default function Task({ text, done }) {
 }
 
 Task.propTypes = {
-  text: [PropTypes.string, PropTypes.element.isRequired],
+  text: PropTypes.string.isRequired,
   done: PropTypes.bool,
+};
+
+Task.defaultProps = {
+  done: false,
 };

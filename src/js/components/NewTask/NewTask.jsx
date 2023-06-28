@@ -15,3 +15,7 @@ export default function NewTask({ className }) {
 NewTask.propTypes = {
   className: PropTypes.string,
 };
+
+NewTask.defaultProps = {
+  className: "",
+};

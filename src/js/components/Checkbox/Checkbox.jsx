@@ -3,7 +3,7 @@ import styles from "./styles.module.scss";
 import { useState } from "react";
 
 export default function Checkbox({ checked, updateData, className }) {
-  const [isChecked, setIsChecked] = useState(checked || false);
+  const [isChecked, setIsChecked] = useState(checked);
 
   const handleChange = (event) => {
     const checkElement = event.currentTarget;
@@ -33,4 +33,9 @@ Checkbox.propTypes = {
   checked: PropTypes.bool,
   updateData: PropTypes.func,
   className: PropTypes.string,
+};
+
+Checkbox.defaultProps = {
+  checked: false,
+  className: "",
 };

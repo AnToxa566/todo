@@ -23,3 +23,7 @@ export default function DeleteButton({ className }) {
 DeleteButton.propTypes = {
   className: PropTypes.string,
 };
+
+DeleteButton.defaultProps = {
+  className: "",
+};

@@ -4,7 +4,7 @@ import styles from "./styles.module.scss";
 export default function CreateButton({ text }) {
   return (
     <button className={styles.createButton}>
-      {text || "Create"}
+      {text}
       <img
         className={styles.createButton__rightIcon}
         src="src/assets/icons/plus.svg"
@@ -16,4 +16,8 @@ export default function CreateButton({ text }) {
 
 CreateButton.propTypes = {
   text: PropTypes.string,
+};
+
+CreateButton.defaultProps = {
+  text: "Create",
 };
