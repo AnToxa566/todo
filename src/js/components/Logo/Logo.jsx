@@ -1,17 +1,17 @@
-import style from "./logo.module.scss";
+import styles from "./styles.module.scss";
 
 export default function Logo() {
   return (
-    <div className={style.logo}>
+    <div className={styles.logo}>
       <img
-        className={style.logo__icon}
+        className={styles.logo__icon}
         src="src/assets/icons/rocket.svg"
         alt=""
       />
 
-      <p className={style.logo__name}>
-        <span className={style.logo__to}>to</span>
-        <span className={style.logo__do}>do</span>
+      <p className={styles.logo__name}>
+        <span className={styles.logo__to}>to</span>
+        <span className={styles.logo__do}>do</span>
       </p>
     </div>
   );
