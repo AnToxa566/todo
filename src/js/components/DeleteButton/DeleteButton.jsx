@@ -3,9 +3,12 @@ import styles from "./styles.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashCan } from "@fortawesome/free-regular-svg-icons";
 
-export default function DeleteButton({ className }) {
+export default function DeleteButton({ handleClick, className }) {
   return (
-    <button className={`${styles.deleteButton} ${className}`}>
+    <button
+      onClick={handleClick}
+      className={`${styles.deleteButton} ${className}`}
+    >
       <FontAwesomeIcon
         className={styles.deleteButton__icon}
         icon={faTrashCan}
@@ -15,6 +18,7 @@ export default function DeleteButton({ className }) {
 }
 
 DeleteButton.propTypes = {
+  handleClick: PropTypes.func,
   className: PropTypes.string,
 };
 

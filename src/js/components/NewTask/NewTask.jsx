@@ -8,7 +8,7 @@ import styles from "./styles.module.scss";
 import taskStore from "src/js/store/task.js";
 
 export default function NewTask({ className }) {
-  const [title, setTitle] = useState();
+  const [title, setTitle] = useState("");
 
   const handleChange = (event) => {
     setTitle(event.target.value);
@@ -17,6 +17,7 @@ export default function NewTask({ className }) {
   const handleClick = () => {
     if (title) {
       taskStore.addTask(title);
+      setTitle("");
     } else {
       alert("Please enter a new task");
     }
@@ -24,7 +25,11 @@ export default function NewTask({ className }) {
 
   return (
     <div className={`${styles.newTask} ${className}`}>
-      <Input handleChange={handleChange} placeholder="Add a new task" />
+      <Input
+        value={title}
+        handleChange={handleChange}
+        placeholder="Add a new task"
+      />
       <CreateButton handleClick={handleClick} />
     </div>
   );

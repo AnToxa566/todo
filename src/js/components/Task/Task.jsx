@@ -12,6 +12,10 @@ const Task = observer(({ task }) => {
     taskStore.completeTask(task.id);
   };
 
+  const deleteTask = () => {
+    taskStore.removeTask(task.id);
+  };
+
   return (
     <div
       className={`${styles.task} ${
@@ -27,7 +31,10 @@ const Task = observer(({ task }) => {
         <p className={styles.task__title}>{task.title}</p>
       </div>
 
-      <DeleteButton className={styles.task__deleteBtn} />
+      <DeleteButton
+        handleClick={deleteTask}
+        className={styles.task__deleteBtn}
+      />
     </div>
   );
 });
