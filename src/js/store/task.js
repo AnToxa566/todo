@@ -14,15 +14,28 @@ class Task {
       title,
       completed,
     });
+
+    this.saveTasks();
   }
 
   removeTask(id) {
     this.tasks = this.tasks.filter((task) => task.id !== id);
+    this.saveTasks();
   }
 
   completeTask(id) {
     const task = this.tasks.find((task) => task.id === id);
     task.completed = !task.completed;
+
+    this.saveTasks();
+  }
+
+  fetchTasks() {
+    this.tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+  }
+
+  saveTasks() {
+    localStorage.setItem("tasks", JSON.stringify(this.tasks));
   }
 
   get count() {
