@@ -7,7 +7,7 @@ export default function TasksList({ tasks, className }) {
   return (
     <div className={clsx([styles["tasks-list"], className])}>
       {tasks.map((task) => (
-        <Task key={task.id} text={task.text} done={task.isDone} />
+        <Task key={task.id} task={task} />
       ))}
     </div>
   );
@@ -16,9 +16,9 @@ export default function TasksList({ tasks, className }) {
 TasksList.propTypes = {
   tasks: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      text: PropTypes.string.isRequired,
-      isDone: PropTypes.bool.isRequired,
+      id: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      completed: PropTypes.bool.isRequired,
     })
   ).isRequired,
   className: PropTypes.string,

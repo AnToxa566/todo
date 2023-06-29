@@ -11,8 +11,8 @@ export default function Checkbox({ checked, updateData, className }) {
     const checkElement = event.currentTarget;
     checkElement.classList.toggle(`${styles.checkbox_checked}`);
 
-    updateData(!isChecked);
     setIsChecked(!isChecked);
+    updateData();
   };
 
   return (

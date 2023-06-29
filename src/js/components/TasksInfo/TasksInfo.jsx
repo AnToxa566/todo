@@ -1,25 +1,29 @@
 import PropTypes from "prop-types";
 import clsx from "clsx";
-import styles from "./styles.module.scss";
+import { observer } from "mobx-react-lite";
+
 import Counter from "../Counter/Counter";
 
-export default function TasksInfo({ className }) {
+import styles from "./styles.module.scss";
+import taskStore from "src/js/store/task.js";
+
+const TasksInfo = observer(({ className }) => {
   return (
     <div className={clsx([styles["tasks-info"], className])}>
       <div className={styles["tasks-info__created"]}>
         <span className={styles["tasks-info__created-title"]}>
           Created tasks
         </span>
-        <Counter />
+        <Counter value={taskStore.count} />
       </div>
 
       <div className={styles["tasks-info__completed"]}>
         <span className={styles["tasks-info__completed-title"]}>Completed</span>
-        <Counter />
+        <Counter value={taskStore.completedCount} />
       </div>
     </div>
   );
-}
+});
 
 TasksInfo.propTypes = {
   className: PropTypes.string,
@@ -28,3 +32,5 @@ TasksInfo.propTypes = {
 TasksInfo.defaultProps = {
   className: "",
 };
+
+export default TasksInfo;

@@ -17,18 +17,18 @@
         flex-shrink: 0;
     }
 
-    &__text {
+    &__title {
         color: $gray-100;
         font-size: $sm-font-size;
 
         margin: 0 1.125rem 0 .75rem;
     }
 
-    &_done {
+    &_completed {
         .task {
             border-color: $gray-500;
 
-            &__text {
+            &__title {
                 color: $gray-300;
                 text-decoration: line-through;
             }
