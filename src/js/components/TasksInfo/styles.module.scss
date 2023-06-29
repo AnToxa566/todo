@@ -1,0 +1,26 @@
+.tasks-info {
+    display: flex;
+    justify-content: space-between;
+
+    &__created,
+    &__completed {
+        display: flex;
+        align-items: center;
+
+        gap: 0.5rem;
+    }
+
+    &__created-title,
+    &__completed-title {
+        font-size: $sm-font-size;
+        font-weight: 700;
+    }
+
+    &__created-title {
+        color: $blue,
+    }
+
+    &__completed-title {
+        color: $purple,
+    }
+}

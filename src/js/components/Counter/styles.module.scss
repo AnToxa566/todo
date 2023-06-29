@@ -1,0 +1,16 @@
+.counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: $gray-200;
+    background-color: $gray-400;
+
+    padding: 0.125rem 0.5rem;
+
+    border-radius: 999px;
+
+    font-size: $xs-font-size;
+    font-weight: 700;
+    line-height: 100%;
+}

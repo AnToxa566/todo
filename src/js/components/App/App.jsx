@@ -2,7 +2,7 @@ import styles from "./styles.module.scss";
 import Header from "../Header/Header";
 import Container from "../Container/Container";
 import NewTask from "../NewTask/NewTask";
-import Task from "../Task/Task";
+import Tasks from "../Tasks/Tasks";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
 
       <Container>
         <NewTask className={styles.app__newTask} />
-        <Task text="Test" />
+        <Tasks className={styles.app__tasks} />
       </Container>
     </>
   );
