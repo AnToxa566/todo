@@ -5,7 +5,7 @@ export default function Logo() {
     <div className={styles.logo}>
       <img
         className={styles.logo__icon}
-        src="src/assets/icons/rocket.svg"
+        src="/assets/icons/rocket.svg"
         alt=""
       />
 
